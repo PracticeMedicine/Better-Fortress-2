@@ -61,9 +61,9 @@ OPTIONS
 			"type"	"LIST"
 			"options"
 			{
-				"#GameUI_RandomMap"		"RANDOMMAP"
+				"#GameUI_RandomMap"		"-1"
 			}
-			"val"	"#GameUI_RandomMap"
+			"val"	"-1"
 		}
 		"map_preview"
 		{
@@ -84,7 +84,7 @@ OPTIONS
 				"#Server_Visibility_Local"		"0"
 				"#Start_Server_SteamNetworking"	"1"
 			}
-			"val"	"#Server_Visibility_Local"
+			"val"	"0"
 		}
 	}
 	"#Replay_Contest_Rules"
@@ -98,7 +98,7 @@ OPTIONS
 		{
 			"label"	"cheats"
 			"type"	"BOOL"
-			"val"	""
+			"val"	"0"
 		}
 	}
 	"#GameUI_GameMenu_Options"
