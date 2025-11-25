@@ -3755,7 +3755,7 @@ void CTFCreateServerDialog::OnThink()
 					{
 						if (!Q_stricmp(pItem->szValue, pMapInfoObj->curValue))
 						{
-							szMapName = pItem->szItemText;
+							Q_strcpy(szMapName, pItem->szItemText);
 							break;
 						}
 
@@ -3763,7 +3763,7 @@ void CTFCreateServerDialog::OnThink()
 					}
 				}
 				//Msg("Current Selection: %s\n", name);
-				if( szMapName )
+				if( szMapName && szMapName[0] != '\0' )
 				{
 					const char* szMapImage = CFmtStr("vgui/maps/menu_thumb_%s", szMapName);
 
@@ -3774,7 +3774,7 @@ void CTFCreateServerDialog::OnThink()
 					}
 					else
 					{ 
-						pImagePanel->SetImage(CFmtStr("maps/menu_thumb_default", szMapName));
+						pImagePanel->SetImage("maps/menu_thumb_default");
 					}
 				}
 			}
